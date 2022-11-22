@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<header id="">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> <!--Bulma CSS Framework-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/> <!--Choices Plug in-->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets\style.css">
   <title>Coder's Cuisine</title>
-</head>
+</header>
 <body>
-  <div>
+  <div class="headerDiv">
     <header>Coder's Cuisine
     </header>
-    <button>Shuffle!!</button>
+    <div id="shuffleButton"><button>Shuffle!!</button></div>
   </div>
   <main>
     <div> 
-      <div>explanation paragraph</div>
+      <div class="explainParagraph">explanation paragraph</div>
     </div>
+    <div class="inputBar"><input class="input is-hovered" type="text" placeholder="Hovered input"></div>
      <div>
       includes
      </div>
@@ -26,8 +27,8 @@
       Excludes
      </div>
      <div class="control">
-      <input class="input is-hovered" type="text" placeholder="Hovered input">
-      <select id = "choices" multiple="multiple"> 
+
+      <select class ="choicesDiv" id="choices" multiple="multiple"> 
   <option value="Choice 1">Choice 1</option>
   <option value="Choice 2">Choice 2</option>
   <option value="Choice 3">Choice 3</option>
