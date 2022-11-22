@@ -25,11 +25,14 @@
       <label class="checkbox"><input type="checkbox"> Dairy Free</label>
       <label class="checkbox"><input type="checkbox"> Very Healthy</label>
     </div>
-    <div>
-      <h1>Seach Recipes.</h1>
-      <input class="input is-primary" type="text" placeholder="Seach for Recipes">
-      <button class="button is-link is-rounded">Search</button>
-    </div>
+    <form class="container-fluid">
+      <div class="input-group">
+        <span class="input-group-text btn-primary" id="basic-addon1">Search for Recipes</span>
+        <input type="text" id="Search-bar" class="form-control" placeholder="Enter recipe or ingrediants here" aria-label="Username" aria-describedby="basic-addon1">
+        <button type="button" id="search-btn" class="btn btn-primary btn-lg">Search</button>
+      </div>
+     
+    </form>
     <div> 
       <div>Seach Results here</div>
     </div>
@@ -38,6 +41,6 @@
   <footer>
   </footer>
 
-<script src="./script.js"></script>
+<script src="./assets/script.js"></script>
 </body>
 </html>
