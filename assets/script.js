@@ -1,11 +1,11 @@
 class Recipes {
 async fetchRecipe(input) {
 
-const key= 'c532660435c5437ea9550a5436d094b0'
+const key = 'c532660435c5437ea9550a5436d094b0'
 
-search= awaitfetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
+search = awaitfetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
 console.log(search);
-var storedRecipe =await search.json();
+var storedRecipe = await search.json();
 console.log(storedRecipe);
 return storedRecipe;
 }
@@ -15,7 +15,7 @@ var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
 button.addEventListener("click", () => {
     const choice= search.value;
-    search.value="";
+    search.value = "";
     R.fetchRecipe(choice).then((data) =>{
         console.log(data);
     })
