@@ -5,27 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="2nd-style.css">
   <title>Coder's Cuisine</title>
 </head>
 <body>
-  <div>
-    <header>Coder's Cuisine
-    </header>
-  </div>
- <aside>
-    <div class="control">
-        <button id="try-again">Search Again?</button>
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container" id="heroContainer">
+        <h1 id="title">Coder's Cuisine</h1>
+        <h2 id="subTitle">What's for Dinner?</h2>
+      </div>
     </div>
-    <p1>You searched: </p1>
-    <p2>Tips on Recipes: </p2>
- </aside>
-  <main>
-    <div>Recipe Title: </div>
-    <div>Ingrediants List: </div>
-    <div>Actual Recipe: </div>
-  </main>
+  </section>
+  
+    <section class="control" id="control">
+      <div class="container">
+        <div class="columns">
+          <label class="label">You searched: </label>
+            <button id="Try-Again">Try Again?</button>
+            </div>
+          </div>
 
+        <div class="section-side-2">
+          <div class="container">
+            <div class="columns">
+              <label class="label">Tips:</label>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <main class="group" id="group">
+      <p1>Recipe Title </p1>
+      <p2>What you will need: Time it will take:</p2>
+      <p2>Ingrediant List:</p2>
+      <p2>Actual Recipe</p2>
+    </main>
+
+ 
   <footer>
   </footer>
 
