@@ -1,0 +1,57 @@
+.headerDiv {
+    border: 1px solid black;
+    width: 100%;
+    height: 15%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#try-again {
+    position: absolute;
+    right: 20px;
+}
+
+aside {
+    border: 1px solid blue;
+    width: 18%;
+    height: 83%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+}
+
+main {
+    border: 1px solid blue;
+    width: 80%;
+    height: 83%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+
+#recTitle {
+font-size: large;
+top: 0;
+position: absolute;
+padding: 10px;
+
+}
+
+#ingList {
+
+
+}
+
+#actRecipe {
+
+
+}
