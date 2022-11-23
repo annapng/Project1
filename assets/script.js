@@ -2,8 +2,9 @@
 
 class recipeResults {
     async fetchRecipe(input) {
-
-const key = 'c532660435c5437ea9550a5436d094b0'
+// added a second key we can use if we get to more then the set number of calls on the first key. just comment one
+// const key = 'c532660435c5437ea9550a5436d094b0'
+const key ='802a019a602c480da05b17676eeb3ce3'
 
 search = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
 console.log(search);
@@ -45,35 +46,46 @@ class showResults{
         var btn7 = document.getElementById(`${data.results[7].title}`);
         var btn8 = document.getElementById(`${data.results[8].title}`);
         var btn9 = document.getElementById(`${data.results[9].title}`);
+       
         btn0.addEventListener("click",() => {
-            localStorage.setItem(`${data.results[0].title}`,JSON.stringify(data));
+            localStorage.setItem(`recipe`,JSON.stringify(data));
+            document.location.href = "./second-page.html"
         })
         btn1.addEventListener("click",() => {
-            localStorage.setItem(`${data.results[1].title}`,JSON.stringify(data));
+            localStorage.setItem(`recipe`,JSON.stringify(data));
+            document.location.href = "./second-page.html"
         });
          btn2.addEventListener("click",() => {
-             localStorage.setItem(`${data.results[2].title}`,JSON.stringify(data));
+             localStorage.setItem(`recipe`,JSON.stringify(data));
+             document.location.href = "./second-page.html"
         });   
         btn3.addEventListener("click",() => {
-            localStorage.setItem(`${data.results[3].title}`,JSON.stringify(data));
+            localStorage.setItem(`recipe`,JSON.stringify(data));
+            document.location.href = "./second-page.html"
        });
        btn4.addEventListener("click",() => {
-        localStorage.setItem(`${data.results[4].title}`,JSON.stringify(data));
+        localStorage.setItem(`recipe`,JSON.stringify(data));
+        document.location.href = "./second-page.html"
         });
         btn5.addEventListener("click",() => {
-            localStorage.setItem(`${data.results[5].title}`,JSON.stringify(data));
+            localStorage.setItem(`recipe`,JSON.stringify(data));
+            document.location.href = "./second-page.html"
        });
        btn6.addEventListener("click",() => {
-        localStorage.setItem(`${data.results[6].title}`,JSON.stringify(data));
+        localStorage.setItem(`recipe`,JSON.stringify(data));
+        document.location.href = "./second-page.html"
         });
         btn7.addEventListener("click",() => {
-            localStorage.setItem(`${data.results[7].title}`,JSON.stringify(data));
+            localStorage.setItem(`recipe`,JSON.stringify(data));
+            document.location.href = "./second-page.html"
        });
        btn8.addEventListener("click",() => {
-        localStorage.setItem(`${data.results[8].title}`,JSON.stringify(data));
+        localStorage.setItem(`recipe`,JSON.stringify(data));
+        document.location.href = "./second-page.html"
         });
         btn9.addEventListener("click",() => {
-            localStorage.setItem(`${data.results[9].title}`,JSON.stringify(data));
+            localStorage.setItem(`recipe`,JSON.stringify(data));
+            document.location.href = "./second-page.html"
        });
 
     }
