@@ -1,5 +1,9 @@
 class Recipes {
-async fetchRecipe(input) {
+
+}
+
+class recipeResults {
+    async fetchRecipe(input) {
 
 const key= 'c532660435c5437ea9550a5436d094b0'
 
@@ -9,9 +13,6 @@ var storedRecipe =await search.json();
 console.log(storedRecipe);
 return storedRecipe;
 }
-}
-
-class recipeResults {
     constructor(){
         this.container = document.getElementById("search-results");
     }
@@ -35,7 +36,7 @@ var button = document.getElementById("search-btn");
 button.addEventListener("click", () => {
     const choice= search.value;
     search.value="";
-    R.fetchRecipe(choice).then((data) =>{
+    RR.fetchRecipe(choice).then((data) =>{
         console.log(data);
     })
     RR.displaySearch(choice).then((data) => {
