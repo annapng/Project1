@@ -8,8 +8,9 @@ var pescatar = document.getElementById("pescatar");
 var whole30 = document.getElementById("whole30");
 
 
-class Recipes {
-async fetchRecipe(input) {
+
+class recipeResults {
+    async fetchRecipe(input) {
 
 const key = 'c532660435c5437ea9550a5436d094b0'
 
@@ -25,9 +26,10 @@ var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
 button.addEventListener("click", () => {
     const choice= search.value;
-    search.value = "";
-    R.fetchRecipe(choice).then((data) =>{
+    search.value="";
+    RR.fetchRecipe(choice).then((data) =>{
         console.log(data);
+        SR.displaySearch(data);
     })
     
 })
