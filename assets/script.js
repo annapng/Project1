@@ -1,3 +1,13 @@
+var gf = document.getElementById("gf");
+var df = document.getElementById("df");
+var keto = document.getElementById("keto");
+var paleo = document.getElementById("paleo");
+var gf = document.getElementById("vegan");
+var gf = document.getElementById("vegetar");
+var gf = document.getElementById("pescatar");
+var gf = document.getElementById("whole30");
+
+
 class Recipes {
 async fetchRecipe(input) {
 
@@ -21,3 +31,10 @@ button.addEventListener("click", () => {
     })
     
 })
+
+
+
+function checkboxes {
+
+
+}
