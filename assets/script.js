@@ -2,10 +2,10 @@ var gf = document.getElementById("gf");
 var df = document.getElementById("df");
 var keto = document.getElementById("keto");
 var paleo = document.getElementById("paleo");
-var gf = document.getElementById("vegan");
-var gf = document.getElementById("vegetar");
-var gf = document.getElementById("pescatar");
-var gf = document.getElementById("whole30");
+var vegan = document.getElementById("vegan");
+var vegetar = document.getElementById("vegetar");
+var pescatar = document.getElementById("pescatar");
+var whole30 = document.getElementById("whole30");
 
 
 class Recipes {
