@@ -5,11 +5,15 @@ class Recipes {
 class recipeResults {
     async fetchRecipe(input) {
 
-const key= 'c532660435c5437ea9550a5436d094b0'
+const key = 'c532660435c5437ea9550a5436d094b0'
 
+<<<<<<< HEAD
 search= await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
+=======
+search = awaitfetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
+>>>>>>> 073e1d2c99d054f77b6a8cb5c253334ffcff3cd1
 console.log(search);
-var storedRecipe =await search.json();
+var storedRecipe = await search.json();
 console.log(storedRecipe);
 return storedRecipe;
 }
@@ -35,8 +39,13 @@ var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
 button.addEventListener("click", () => {
     const choice= search.value;
+<<<<<<< HEAD
     search.value="";
     RR.fetchRecipe(choice).then((data) =>{
+=======
+    search.value = "";
+    R.fetchRecipe(choice).then((data) =>{
+>>>>>>> 073e1d2c99d054f77b6a8cb5c253334ffcff3cd1
         console.log(data);
     })
     RR.displaySearch(choice).then((data) => {
