@@ -5,17 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
   <link rel="stylesheet" href="./assets/style.css">
+
+  <link rel="stylesheet" href="assets\style.css">
+
   <title>Coder's Cuisine</title>
 </head>
 <body>
-  <div>
+  <div class="headerDiv">
     <header>Coder's Cuisine
     </header>
-    <button>Shuffle!!</button>
+    <button id="shuffleButton">Shuffle!!</button>
   </div>
   <main>
     <div>
+      <div class="explainParagraph">explaining paragraph</div>
       <h2></h2>
       <label class="checkbox"><input type="checkbox"> Gluten Free</label>
       <label class="checkbox"><input type="checkbox"> Ketogenic</label>
@@ -28,13 +33,13 @@
     <form class="container-fluid">
       <div class="input-group">
         <span class="input-group-text btn-primary" id="basic-addon1">Search for Recipes</span>
-        <input type="text" id="Search-bar" class="form-control" placeholder="Enter recipe or ingrediants here" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" id="Search-bar" class="form-control" placeholder="Enter recipe or ingredients here" aria-label="Username" aria-describedby="basic-addon1">
         <button type="button" id="search-btn" class="btn btn-primary btn-lg">Search</button>
       </div>
      
     </form>
     <div> 
-      <div>Seach Results here</div>
+      <div>Search Results here</div>
     </div>
    
   </main>
