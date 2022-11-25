@@ -90,15 +90,23 @@ class showResults{
 
     }
 };
+function clear(){
+    results=document.getElementById("search-results")
+    results.innerHTML="";
+    document.getElementById("input").reset();
+}
 var SR = new showResults();
 var RR = new recipeResults
 var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
 button.addEventListener("click", () => {
     const choice= search.value;
+    console.log(choice)
     search.value="";
+    clear();
     RR.fetchRecipe(choice).then((data) =>{
         console.log(data);
+        
         SR.displaySearch(data);
     })
 })
