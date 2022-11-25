@@ -6,19 +6,17 @@
   <meta name="description" content="">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/secondstyle.css">
+  <script src="assets/secondscript.js"></script>
   <title>Coder's Cuisine</title>
 </head>
 
 <body>
-  <div>
-    <header id="headerDiv" $display-font-weight: 300;
-    $display-line-height: $headings-line-height;>Coder's Cuisine
-      <div class="control">
-        <button id="shuffle" type="button" class="btn btn-info">Shuffle!</button>
+    
+  <div class="container" id="headerDiv">
+      <h1>Coder's Cuisine</h1>      
+      <p>What's for Dinner?</p>
+      <button id="shuffleButton">Shuffle!!</button>
     </div>
-    </header>
-  </div>
-
  <aside>
     <p>You searched:
       <h2></h2>
@@ -33,12 +31,12 @@
     <button id="try-again" type="button" class="btn btn-info">Search Again?</button>
  </aside>
 
-  <main>
-    <div id="resultsPhoto">results photo section</div>
-    <div id="recTitle">Recipe Title: </div>
-    <div id="ingList">Ingredients List: </div>
-    <div id="actRecipe">Actual Recipe: </div>
-  </main>
+
+  <section class="container">
+    <div class="search">
+      <div id="recipe-container">
+    </div>
+  </section>
  
   <footer>
   </footer>
