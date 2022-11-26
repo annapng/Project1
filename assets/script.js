@@ -7,14 +7,12 @@ var vegetar = document.getElementById("vegetar");
 var pescatar = document.getElementById("pescatar");
 var whole30 = document.getElementById("whole30");
 
-
-
 class recipeResults {
     async fetchRecipe(input) {
 
 const key = 'c532660435c5437ea9550a5436d094b0'
 
-search = awaitfetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
+search = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
 console.log(search);
 var storedRecipe = await search.json();
 console.log(storedRecipe);
@@ -49,18 +47,23 @@ var RR = new recipeResults
 var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
 button.addEventListener("click", () => {
+  
+    let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+    console.log(values);
+
+    if (gf.checked = true) {let gf1 = "&diet=glutenfree";
+                            search.concat(gf1)};
+  //  if () {};
+   // if () {};
+console.log(search);
+
     const choice= search.value;
     search.value="";
     RR.fetchRecipe(choice).then((data) =>{
         console.log(data);
         SR.displaySearch(data);
-    })
-    
-})
-
-
-
-function checkboxes {
-
-
-}
+    })});
