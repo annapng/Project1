@@ -49,10 +49,12 @@ class showResults{
        
         btn0.addEventListener("click",() => {
             localStorage.setItem(`recipe`,JSON.stringify(data));
+            localStorage.setItem(`current-recipe`,JSON.stringify(0)); 
             document.location.href = "./second-page.html"
         })
         btn1.addEventListener("click",() => {
             localStorage.setItem(`recipe`,JSON.stringify(data));
+            localStorage.setItem(`current-recipe`,JSON.stringify(1)); 
             document.location.href = "./second-page.html"
         });
          btn2.addEventListener("click",() => {

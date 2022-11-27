@@ -1,6 +1,47 @@
 const recipeContainer = document.querySelector("#recipe-container")
 
-function loadRecipes(type = "products"){
+
+function renderRecipe () {
+    var recipeList = JSON.parse(localStorage.getItem("recipe"))
+    var chosenIndex = JSON.parse(localStorage.getItem("current-recipe"))
+    var chosenRecipe = recipeList.results[chosenIndex]
+    console.log (recipeList)
+    console.log (chosenIndex)
+    console.log (chosenRecipe)
+    recipeContainer.innerHTML = `<div class="recipe"> 
+    <div id="recTitle">${chosenRecipe.title}</div>
+    <div id="recipe-img">;
+      <img src="${chosenRecipe.image}" alt="photo of recipe">
+    </div>
+    <div id="ingList"></div>
+    <div id="actRecipe">Actual Recipe
+      <ul>
+        <li>Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+        <li>Step 4</li>
+        <li>Step 5</li>
+      </ul>
+    </div>
+  </div>
+  </div>`
+    
+}
+
+renderRecipe()
+
+var tryAgain = document.getElementById("tryAgain");
+
+tryAgain.addEventListener ("click",() => {
+    document.location.href = "./index.html"});
+
+
+
+
+
+
+
+/*function loadRecipes(type = "products"){
     const baseURL = `https://api.spoonacular.com/food/products/search?query=yogurt&apiKey=c532660435c5437ea9550a5436d094b0`; 
     const url = baseURL + '&q=${type}'; 
     fetch(url)
