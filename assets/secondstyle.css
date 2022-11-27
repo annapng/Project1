@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-#try-again {
+#shuffle {
     position: absolute;
     right: 20px;
 }
@@ -25,7 +25,12 @@ aside {
 
 }
 
-main {
+#tryAgain {
+    position: absolute; 
+    right: 20px;
+}
+
+section {
     border: 1px solid blue;
     width: 80%;
     height: 83%;
@@ -38,9 +43,18 @@ main {
     right: 0;
 }
 
+
+#resultsPhoto {
+    font-size: large;
+    top: 0;
+    position: absolute;
+    padding: 10px;
+    
+}
+
 #recTitle {
 font-size: large;
-top: 0;
+top: 10;
 position: absolute;
 padding: 10px;
 
