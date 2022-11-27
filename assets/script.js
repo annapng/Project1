@@ -130,7 +130,5 @@ search.value = "";
     RR.fetchRecipe(choice).then((data) =>{
         console.log(data);
         SR.displaySearch(data);
-<<<<<<< HEAD
-
 
     })});
