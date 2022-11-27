@@ -101,7 +101,29 @@ button.addEventListener("click", () => {
         console.log(data);
         SR.displaySearch(data);
     })
-    // .then(() => {
-    //     console.log(data);
-    // })
+})
+
+// call for the shuffle infomation from spoonacular
+class randomRecipe {
+    async fetchRandom() {
+// added a second key we can use if we get to more then the set number of calls on the first key. just comment one
+// const key = 'c532660435c5437ea9550a5436d094b0'
+const key ='802a019a602c480da05b17676eeb3ce3'
+
+var random = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${key}`);
+console.log(random);
+var storedRandom = await random.json();
+console.log(storedRandom);
+return storedRandom;
+}
+}  
+// event listner for the random button
+var rand = new randomRecipe();  
+var randombtn = document.getElementById("shuffleButton")
+randombtn.addEventListener("click",() => {
+    rand.fetchRandom().then((data) => {
+    console.log(data)
+    localStorage.setItem('recipe', JSON.stringify(data));
+    document.location.href = "./second-page.html"
+    })
 })
