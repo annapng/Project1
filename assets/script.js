@@ -95,7 +95,7 @@ class showResults{
 function clear(){
     results=document.getElementById("search-results")
     results.innerHTML="";
-    document.getElementById("input").reset();
+    // document.getElementById("input").reset();
 }
 var SR = new showResults();
 var RR = new recipeResults
