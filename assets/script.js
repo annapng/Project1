@@ -61,6 +61,9 @@ class showResults{
                 <button type=button id= "${data.results[9].title}" class="results">${data.results[9].title} <img src=${data.results[9].image} </button>
             </div>
         `
+        // for (let i =0;len = data.length; i <= len i++) {
+
+        // }
     
         
         var btn0 = document.getElementById(`${data.results[0].title}`);
@@ -139,3 +142,52 @@ button.addEventListener("click", () => {
         SR.displaySearch(data);
 
     })});
+
+    class randomRecipe {
+        async fetchRandom() {
+    // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
+    const key = 'c532660435c5437ea9550a5436d094b0'
+    // const key ='802a019a602c480da05b17676eeb3ce3'
+    
+    var random = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${key}`);
+    console.log(random);
+    var storedRandom = await random.json();
+    return storedRandom;
+    }
+    }  
+    // event listner for the random button
+    var rand = new randomRecipe();  
+    var randombtn = document.getElementById("shuffleButton")
+    randombtn.addEventListener("click",() => {
+        rand.fetchRandom().then((data) => {
+        localStorage.setItem('recipe', JSON.stringify(data));
+        document.location.href = "./second-page.html"
+        })
+    })
+    // function  (){
+    //     const key ='c532660435c5437ea9550a5436d094b0'
+    //     var trivia = fetch(`https://api.spoonacular.com/food/trivia/random?apiKey=${key}`)
+    //     console.log(trivia)
+        
+    //     triviaRandom = fetch(`https://api.spoonacular.com/food/trivia/random?apiKey=${key}`)
+    //     console.log(triviaRandom)
+
+        
+    // }
+    class trivia {
+        async randomTrivia() {
+    // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
+    const key = 'c532660435c5437ea9550a5436d094b0'
+    // const key ='802a019a602c480da05b17676eeb3ce3'
+    var show = document.getElementById("trivia")
+
+    var triviaRandom = await fetch(`https://api.spoonacular.com/food/trivia/random?apiKey=${key}`);
+    console.log(triviaRandom);
+   var storedTrivia = triviaRandom.json();
+   console.log(storedTrivia)
+        show.textContent = storedTrivia.promise.PromiseResult.text
+    return ;
+    }
+    }  
+   t = new trivia
+   t.randomTrivia();

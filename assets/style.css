@@ -28,10 +28,11 @@ main {
 }
 
 
-.explainParagraph {
+.trivia {
     border: 1px solid black;
     /* position: absolute; */
     text-align: center;
+    justify-content: center;
     height: 100px;
     width: 60%;
     top: 0;
