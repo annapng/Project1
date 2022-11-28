@@ -1,22 +1,34 @@
+
+:root {
+--primary:green;
+--secondary:white;
+}
 .headerDiv {
-    border: 1px solid black;
+    border-bottom: 10px solid var(--secondary);
     width: 100%;
     height: 15%;
+    font-size: 100%;
     /* position: fixed; */
     top: 0;
     right: 0;
     left: 0;
     padding: 10px;
     text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.headerTitle {
+    font-size: 300%;
 }
 
-#shuffleButton {
+.shuffleButton {
     /* position: absolute; */
     right: 20px;
+    font-size: 100%;
 }
 
 main {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     height: 83%;
     /* position: fixed; */
@@ -25,11 +37,12 @@ main {
     justify-content: center;
     align-items: center;
     bottom: 0;
+    background-color: var(--primary);
 }
 
 
 .trivia {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* position: absolute; */
     text-align: center;
     justify-content: center;
@@ -67,10 +80,14 @@ main {
   .results {
    display: flex;
    flex-direction: column;
-   width: 18%;
+   width: 30%;
    padding: 15 px;
    justify-content: center;
    text-align: center;
+   color: var(--secondary);
+   background-color: var(--primary);
+   border: var(--secondary);
+   padding: 5px;
    
   
     /* position: relative; */
@@ -83,7 +100,26 @@ main {
   
   .search-results {
     /* position: fixed; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 15px;
     justify-content: space-around;
   }
+  .checkbox {
+    color: white;
+  }
+  .btn{
+    color: white;
+    background-color:green;
+    border:2px solid white;
+    
+  }
+.btn1{
+    color: white;
+    background-color:green;
+    border:2px solid white;
+    
+}
+.btn:hover{
+    color: green;
+    background-color: white;
+}
