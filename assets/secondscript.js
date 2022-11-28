@@ -15,16 +15,27 @@ $.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidg
   var ingredientList = [];
    ingredientList = ingredientData.ingredients;
    console.log(ingredientList);
+   window.ingredientList = ingredientList;
 });
 
 
 $.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/analyzedInstructions?apiKey=${key}`, function(stepData) {
-  var stepList = [];
   console.log(stepData);
-  stepList = stepData.steps;
-  console.log(stepList);
-});
+  console.log(stepData[0].steps);
 
+
+  for (let i = 0; i < stepData[0].steps.length; i++) {
+   
+    var stepList = Object.values(stepData[0].steps[i].step);
+    stepList[i] = stepList[i].join("");
+    console.log(stepList[i]);
+    
+  }
+  
+
+
+
+});
 
 
 function renderRecipe () {
@@ -38,6 +49,7 @@ function renderRecipe () {
 
 
   var ingUl = document.getElementById("ingredUl");
+  console.log(ingredientList);
   ingredientList.forEach((item) => {
     let li = document.createElement("li");
     li.innertext = item;
