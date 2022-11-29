@@ -208,3 +208,4 @@ search.addEventListener("keydown", function(event) {
 //     }  
 //    t = new trivia
 //    t.randomTrivia();
+ 
