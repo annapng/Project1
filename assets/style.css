@@ -80,7 +80,7 @@ main {
 .results {
    display: flex;
    flex-direction: column;
-   width: 30%;
+   width: 100%;
    padding: 15 px;
    justify-content: center;
    text-align: center;
@@ -88,6 +88,7 @@ main {
    background-color: var(--primary);
    border: var(--secondary);
    padding: 5px;
+   align-items: center;
 
   }
 
@@ -113,6 +114,7 @@ main {
     color: white;
     background-color:#C990C0;
     border:2px solid white;
+    width: 150px;
   }
 
 .btn1 {
