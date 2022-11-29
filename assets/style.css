@@ -1,22 +1,37 @@
+
+:root {
+--primary:green;
+--secondary:white;
+}
+body {
+    background-color: var(--primary);
+}
 .headerDiv {
-    border: 1px solid black;
+    border-bottom: 10px solid var(--secondary);
     width: 100%;
     height: 15%;
+    font-size: 100%;
     /* position: fixed; */
     top: 0;
     right: 0;
     left: 0;
     padding: 10px;
     text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.headerTitle {
+    font-size: 300%;
 }
 
-#shuffleButton {
+.shuffleButton {
     /* position: absolute; */
     right: 20px;
+    font-size: 100%;
 }
 
 main {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     height: 83%;
     /* position: fixed; */
@@ -25,17 +40,19 @@ main {
     justify-content: center;
     align-items: center;
     bottom: 0;
+    background-color: var(--primary);
 }
 
 
-.explainParagraph {
-    border: 1px solid black;
+.trivia {
+    /* border: 1px solid black; */
     /* position: absolute; */
     text-align: center;
+    justify-content: center;
     height: 100px;
     width: 60%;
-    top: 0;
-    right: 20%;
+    /* top: 0;
+    right: 20%; */
 }
 
 .inputBar {
@@ -66,10 +83,14 @@ main {
   .results {
    display: flex;
    flex-direction: column;
-   width: 18%;
+   width: 30%;
    padding: 15 px;
    justify-content: center;
    text-align: center;
+   color: var(--secondary);
+   background-color: var(--primary);
+   border: var(--secondary);
+   padding: 5px;
    
   
     /* position: relative; */
@@ -82,7 +103,43 @@ main {
   
   .search-results {
     /* position: fixed; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 15px;
     justify-content: space-around;
   }
+  .checkbox {
+    color: white;
+    font-size: 150%;
+  }
+  .btn{
+    color: white;
+    background-color:green;
+    border:2px solid white;
+    
+  }
+.btn1{
+    color: white;
+    background-color:green;
+    border:2px solid white;
+    
+}
+.btn:hover{
+    color: green;
+    background-color: white;
+}
+
+@media (max-width: 991.98px) {
+    .results {
+        width: 48%;
+    }
+}
+@media (max-width: 576px) {
+    .results {
+        width: 99%;
+    }
+    .btn1 {
+      color: var(--primary);
+       width: 0px;
+
+    }
+}

@@ -14,13 +14,13 @@
 </head>
 <body>
   <div class="headerDiv">
-    <header>Coder's Cuisine
+    <header class="headerTitle">Coder's Cuisine
     </header>
-    <button id="shuffleButton">Shuffle!!</button>
+    <button class="shuffleButton btn" id="shuffleButton">Let us choose for you, Click for a random recipe!!</button>
   </div>
   <main>
     <div>
-      <div class="explainParagraph">explaining paragraph</div>
+      <div class="trivia" id="trivia"></div>
       <h2></h2>
       <label class="checkbox"><input type="checkbox" id="gf" value="glutenfree"> Gluten Free</label>
       <label class="checkbox"><input type="checkbox" id="df" value="dairyfree"> Dairy Free</label>
@@ -31,17 +31,17 @@
       <label class="checkbox"><input type="checkbox" id="pescatar" value="pescatarian"> Pescatarian</label>
       <label class="checkbox"><input type="checkbox" id="whole30" value="whole30"> Whole30</label>
     </div>
-    <form class="container-fluid">
+    <form class="container-fluid" id="input">
       <div class="input-group">
-        <span class="input-group-text btn-primary" id="basic-addon1">Search for Recipes</span>
+        <span class="input-group-text btn1" id="basic-addon1">Search for Recipes</span>
         <input type="text" id="Search-bar" class="form-control" placeholder="Enter recipe or ingredients here" aria-label="Username" aria-describedby="basic-addon1">
-        <button type="button" id="search-btn" class="btn btn-primary btn-lg">Search</button>
+        <button type="button" id="search-btn" class="btn btn-lg">Search</button>
       </div>
      
     </form>
 
     <div class="search-results"> 
-      <div id="search-results">Search Results here</div>
+      <div id="search-results"></div>
     </div>
    
   </main>
