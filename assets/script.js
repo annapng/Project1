@@ -10,8 +10,8 @@ var whole30 = document.getElementById("whole30");
 class recipeResults {
     async fetchRecipe(input) {
 // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
-// const key = 'c532660435c5437ea9550a5436d094b0'
-const key ='802a019a602c480da05b17676eeb3ce3'
+const key = 'c532660435c5437ea9550a5436d094b0'
+// const key ='802a019a602c480da05b17676eeb3ce3'
 
 let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
 let values = [];
@@ -131,6 +131,13 @@ var SR = new showResults();
 var RR = new recipeResults
 var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
+
+search.addEventListener("keyup", function(event) {
+    if (event.key === "Enter"){
+        button.click();
+    }
+})
+
 button.addEventListener("click", () => {
     const choice= search.value;
     console.log(choice)
@@ -176,9 +183,10 @@ button.addEventListener("click", () => {
 //     console.log(triviaRandom);
 //    var storedTrivia = triviaRandom.json();
 //    console.log(storedTrivia)
-//         show.textContent = storedTrivia.promise.PromiseResult.text
+//         // show.textContent = storedTrivia.promise.PromiseResult.text
 //     return ;
 //     }
 //     }  
 //    t = new trivia
 //    t.randomTrivia();
+ 
