@@ -1,6 +1,6 @@
 const recipeContainer = document.querySelector("#recipe-container");
 // const key ='802a019a602c480da05b17676eeb3ce3';
-// const key ="8848face408443bda493657897ec7fac"
+// const key ="8848face408443bda493657897ec7fac";
 // https://api.spoonacular.com/recipes/analyzeInstructions
 // new emergency api key:
 // const key = 'cce3181053584b698c17ad000331b803';
