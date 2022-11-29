@@ -10,6 +10,10 @@ console.log (chosenIndex);
 console.log (chosenRecipe);
 console.log (chosenRecipe.id);
 
+/*
+var search = fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}/${chosenRecipe.id}/card`);
+console.log(search);
+
 
 $.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidget.json?apiKey=${key}`, function(ingredientData){
   var ingredientList = [];
@@ -17,41 +21,53 @@ $.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidg
    console.log(ingredientList);
    window.ingredientList = ingredientList;
 });
+*/
+
+var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?apiKey=${key}`)
+  .then((response) => {
+    var card = response; 
+    console.log(card)
+    var cardURL = card.url;
+    image(cardURL);
+    console.log(cardURL);
 
 
-$.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/analyzedInstructions?apiKey=${key}`, function(stepData) {
-  console.log(stepData);
-  console.log(stepData[0].steps);
 
- 
-    var stepList = Object.values(stepData[0].steps[0].step);
-    stepList = stepList.join("");
-    console.log(stepList);
+  });
 
+function image(cardURL) {
+
+  fetch(cardURL)
+  .then((response) => {
+    return response.json();
+   /* console.log(response);
+    console.log(response.PromiseResult);
+    console.log(response.url); */
+
+  })
+
+  .then((response) => {
+    console.log(response);
+    console.log(response.url);
+    var image = response.url;
+    renderRecipe(image);
+
+  })
   
+}
 
 
 
-});
 
+function renderRecipe (image) {
 
-function renderRecipe () {
-
-    recipeContainer.insertAdjacentHTML(`afterbegin`, `<div class="recipe"> 
-    <div id="recTitle">${chosenRecipe.title}</div>
-    <div id="recipe-img">;
-      <img src="${chosenRecipe.image}" alt="photo of recipe">
+    recipeContainer.insertAdjacentHTML(`afterbegin`, 
+    `<div id="recipe-img">
+      <img src="${image}" alt="photo of recipe">
     </div>
   </div>`);
 
 
-  var ingUl = document.getElementById("ingredUl");
-  console.log(ingredientList);
-  ingredientList.forEach((item) => {
-    let li = document.createElement("li");
-    li.innertext = item;
-    ingUl.appendChild(li);
-  });
   
 }
 
@@ -62,6 +78,7 @@ var tryAgain = document.getElementById("tryAgain");
 tryAgain.addEventListener ("click",() => {
     document.location.href = "./index.html"});
 
+<<<<<<< HEAD
 // shuffle buton fetch and event
 class randomRecipe {
         async fetchRandom() {
@@ -203,3 +220,6 @@ button.addEventListener("click", () => {
 
 
  
+=======
+
+>>>>>>> a4fd5b360d5d86a01546d4ea7e3a5d04e7a322fc
