@@ -1,18 +1,6 @@
 # Project1
-<<<<<<< HEAD
-First project for DU Bootcamp
-
- fun stuff
-=======
- fun stuff
->>>>>>> c6a8f23402f794fc233ce64393e0805743adb868
-=======
-
-# <Your-Project-Title>
-=======
 
 # Coder's Cuisine
->>>>>>> 04d99cc4766cf412b7e61ec1f69cdda7cf45f747
 
 ## Description
 
