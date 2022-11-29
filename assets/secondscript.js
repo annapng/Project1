@@ -3,7 +3,8 @@ const recipeContainer = document.querySelector("#recipe-container");
 // const key ="8848face408443bda493657897ec7fac"
 // https://api.spoonacular.com/recipes/analyzeInstructions
 // new emergency api key:
-const key = 'cce3181053584b698c17ad000331b803';
+// const key = 'cce3181053584b698c17ad000331b803';
+const key ='f20c89b2b15e4edd9e95b759b8146d36'
 
 var recipeList = JSON.parse(localStorage.getItem("recipe"));
 var chosenIndex = JSON.parse(localStorage.getItem("current-recipe"));
