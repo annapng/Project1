@@ -1,17 +1,42 @@
-var glutenfree = document.getElementById("gf");
-var dairyfree = document.getElementById("df");
-var ketogenic = document.getElementById("keto");
-var paleo = document.getElementById("paleo");
-var vegan = document.getElementById("vegan");
-var vegetarian = document.getElementById("vegetar");
-var pescatarian = document.getElementById("pescatar");
-var whole30 = document.getElementById("whole30");
+
+//var key = 'c532660435c5437ea9550a5436d094b0'
+
+// recipie = fetch ('https://api.spoonacular.com/recipes/complexSearch?apiKey=c532660435c5437ea9550a5436d094b0')
+//     .then(res => {
+//         if (res.ok) {
+//         console.log('SUCCESS')
+//     } else {
+//         console.log('NOT SUCCESSFUL')
+//     }
+// }) 
+
+
+// recipie = fetch ('https://api.spoonacular.com/recipes/findByIngredients?apiKey=c532660435c5437ea9550a5436d094b0') 
+//     .then(res => {
+//         if (res.ok) {
+//         console.log('SUCCESS')
+//     } else {
+//         console.log('NOT SUCCESSFUL')
+//     }
+// }) 
+
+function App() {
+    const [pantryItems, setPantryItems] = useState(null);
+    const [allergies, setAllergies] = useState(null);
+
+    //return <div className='App'></div>;
+        //<section className=''
+}
+
 
 class recipeResults {
     async fetchRecipe(input) {
+
+
 // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
 const key = 'c532660435c5437ea9550a5436d094b0'
 // const key ='802a019a602c480da05b17676eeb3ce3'
+
 
 let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
 let values = [];
@@ -147,8 +172,10 @@ button.addEventListener("click", () => {
         console.log(data);
         
         SR.displaySearch(data);
+    })
+})
 
-    })});
+
 
     class randomRecipe {
         async fetchRandom() {
