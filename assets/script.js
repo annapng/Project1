@@ -35,7 +35,8 @@ class recipeResults {
 
 // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
 // const key = 'c532660435c5437ea9550a5436d094b0'
- const key ='802a019a602c480da05b17676eeb3ce3'
+//  const key ='802a019a602c480da05b17676eeb3ce3'
+ const key = "8848face408443bda493657897ec7fac"
 
 
 let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
@@ -157,11 +158,7 @@ var RR = new recipeResults
 var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
 
-search.addEventListener("keyup", function(event) {
-    if (event.key === "Enter"){
-        button.click();
-    }
-})
+
 
 button.addEventListener("click", () => {
     const choice= search.value;
@@ -174,14 +171,19 @@ button.addEventListener("click", () => {
         SR.displaySearch(data);
     })
 })
-
+search.addEventListener("keydown", function(event) {
+    if (event.key === "Enter"){
+        button.click();
+    }
+})
 
 
     class randomRecipe {
         async fetchRandom() {
     // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
-    const key = 'c532660435c5437ea9550a5436d094b0'
+    // const key = 'c532660435c5437ea9550a5436d094b0'
     // const key ='802a019a602c480da05b17676eeb3ce3'
+    const key ="8848face408443bda493657897ec7fac"
     
     var random = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${key}`);
     console.log(random);

@@ -1,5 +1,6 @@
 const recipeContainer = document.querySelector("#recipe-container");
-const key ='802a019a602c480da05b17676eeb3ce3';
+// const key ='802a019a602c480da05b17676eeb3ce3';
+const key ="8848face408443bda493657897ec7fac"
 // https://api.spoonacular.com/recipes/analyzeInstructions
 
 var recipeList = JSON.parse(localStorage.getItem("recipe"));
@@ -77,5 +78,6 @@ var tryAgain = document.getElementById("tryAgain");
 
 tryAgain.addEventListener ("click",() => {
     document.location.href = "./index.html"});
+
 
 
