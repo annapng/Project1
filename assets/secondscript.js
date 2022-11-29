@@ -21,7 +21,7 @@ $.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidg
    console.log(ingredientList);
    window.ingredientList = ingredientList;
 });
-*/
+
 
 var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?apiKey=${key}`)
   .then((response) => {
@@ -42,7 +42,7 @@ function image(cardURL) {
     return response.json();
    /* console.log(response);
     console.log(response.PromiseResult);
-    console.log(response.url); */
+    console.log(response.url); 
 
   })
 
@@ -217,9 +217,3 @@ button.addEventListener("click", () => {
     })
 })
 */
-
-
- 
-=======
-
->>>>>>> a4fd5b360d5d86a01546d4ea7e3a5d04e7a322fc
