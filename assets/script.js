@@ -1,36 +1,16 @@
+// new emergency api key:
+// const key = 'cce3181053584b698c17ad000331b803';
 
-//var key = 'c532660435c5437ea9550a5436d094b0'
-
-// recipie = fetch ('https://api.spoonacular.com/recipes/complexSearch?apiKey=c532660435c5437ea9550a5436d094b0')
-//     .then(res => {
-//         if (res.ok) {
-//         console.log('SUCCESS')
-//     } else {
-//         console.log('NOT SUCCESSFUL')
-//     }
-// }) 
-
-
-// recipie = fetch ('https://api.spoonacular.com/recipes/findByIngredients?apiKey=c532660435c5437ea9550a5436d094b0') 
-//     .then(res => {
-//         if (res.ok) {
-//         console.log('SUCCESS')
-//     } else {
-//         console.log('NOT SUCCESSFUL')
-//     }
-// }) 
 
 function App() {
     const [pantryItems, setPantryItems] = useState(null);
     const [allergies, setAllergies] = useState(null);
-
-    //return <div className='App'></div>;
-        //<section className=''
 }
 
 
 class recipeResults {
     async fetchRecipe(input) {
+<<<<<<< HEAD
 
 
 // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
@@ -43,10 +23,19 @@ let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
 let values = [];
 checkboxes.forEach((checkbox) => {
     values.push(checkbox.value);
+=======
+    const key ='8848face408443bda493657897ec7fac';
+    let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+      values.push(checkbox.value);
+>>>>>>> 6d2c2afb7cf4bc98ad23dcbef545f4d7c4c03833
 });
+
 
 console.log(values);
 var searchArray = "&diet=";
+
 
 for (let i = 0; i < values.length; i++) {
    searchArray = searchArray.concat(values[i]);
@@ -62,8 +51,7 @@ console.log(search);
 var storedRecipe = await search.json();
 console.log(storedRecipe);
 return storedRecipe;
-}
-}
+}}
 
 
 class showResults{
@@ -87,10 +75,6 @@ class showResults{
                 <button type=button id= "${data.results[9].title}" class="results">${data.results[9].title} <img src=${data.results[9].image} </button>
             </div>
         `
-        // for (let i =0;len = data.length; i <= len i++) {
-
-        // }
-    
         
         var btn0 = document.getElementById(`${data.results[0].title}`);
         var btn1 = document.getElementById(`${data.results[1].title}`);
@@ -145,19 +129,26 @@ class showResults{
             localStorage.setItem(`recipe`,JSON.stringify(data));
             document.location.href = "./second-page.html"
        });
+    }};
 
-    }
-};
+
 function clear(){
     results=document.getElementById("search-results")
     results.innerHTML="";
-    // document.getElementById("input").reset();
 }
+
+
 var SR = new showResults();
 var RR = new recipeResults
 var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
 
+
+search.addEventListener("keyup", function(event) {
+    if (event.key === "Enter"){
+        button.click();
+    }
+})
 
 
 button.addEventListener("click", () => {
@@ -189,8 +180,7 @@ search.addEventListener("keydown", function(event) {
     console.log(random);
     var storedRandom = await random.json();
     return storedRandom;
-    }
-    }  
+    }}  
     // event listner for the random button
     var rand = new randomRecipe();  
     var randombtn = document.getElementById("shuffleButton")
