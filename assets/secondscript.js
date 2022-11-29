@@ -27,24 +27,45 @@ var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?a
   .then((response) => {
     var card = response; 
     console.log(card)
-    console.log(card.url);
     var cardURL = card.url;
-    renderRecipe(cardURL);
-    console.log(Response.url);
-   console.log(Response.url.value);
+    image(cardURL);
+    console.log(cardURL);
+
+
+
   });
 
+function image(cardURL) {
+
+  fetch(cardURL)
+  .then((response) => {
+    return response.json();
+   /* console.log(response);
+    console.log(response.PromiseResult);
+    console.log(response.url); */
+
+  })
+
+  .then((response) => {
+    console.log(response);
+    console.log(response.url);
+    var image = response.url;
+    renderRecipe(image);
+
+  })
+  
+}
 
 
 
-function renderRecipe (cardURL) {
+
+function renderRecipe (image) {
 
     recipeContainer.insertAdjacentHTML(`afterbegin`, 
     `<div id="recipe-img">
-      <img src="${cardURL}" alt="photo of recipe">
+      <img src="${image}" alt="photo of recipe">
     </div>
   </div>`);
-
 
 
   
