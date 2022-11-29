@@ -39,6 +39,50 @@ tryAgain.addEventListener ("click",() => {
 
 
 
+  let search;
+  let mealsArray = [];
+  const searchContainerEl = $('search-results-container');
+  const recipeEl = $("recipe");
+
+  if (mealsArray === null) {
+    const searchFailedMsg = $('<p>').text('No results found. Please try again!');
+    $('#previousSearch').append(searchFailedMsg);
+  } else {
+    displaySearchHistory(searchTerm);
+    const historyElement = document.querySelector('[data-search="' + searchTerm + '"]');
+  }
+
+  const recipeSearchCount = `${searchTerm} (${mealsArray.length})`;
+
+  let searchHistory = JSON.parse(localStorage.getItem('search_history'));
+  searchHistory[searchTerm].text = recipeSearchCount;
+
+
+  localStorage.setItem('search_history', JSON.stringify(searchHistory));
+  historyElement.innerHTML = recipeSearchCount;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*function loadRecipes(type = "products"){
