@@ -1,75 +1,70 @@
 
 :root {
---primary:green;
+--primary:rgb(0, 115, 123);
 --secondary:white;
 }
+
 body {
     background-color: var(--primary);
+    background: url(\restaurant.png) repeat;
 }
+
 .headerDiv {
     border-bottom: 10px solid var(--secondary);
     width: 100%;
     height: 15%;
     font-size: 100%;
-    /* position: fixed; */
     top: 0;
     right: 0;
     left: 0;
     padding: 10px;
     text-align: center;
+    background: url(\restaurant.png) repeat;
     background-color: var(--primary);
     color: var(--secondary);
 }
+
 .headerTitle {
     font-size: 300%;
+    font-family: 'Alfa Slab One', cursive;
 }
 
 .shuffleButton {
-    /* position: absolute; */
     right: 20px;
     font-size: 100%;
 }
 
 main {
-    /* border: 1px solid blue; */
     width: 100%;
     height: 83%;
-    /* position: fixed; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     bottom: 0;
-    background-color: var(--primary);
+    text-align: center;
 }
 
 
 .trivia {
-    /* border: 1px solid black; */
-    /* position: absolute; */
     text-align: center;
     justify-content: center;
     height: 100px;
     width: 60%;
-    /* top: 0;
-    right: 20%; */
 }
 
 .inputBar {
     width: 60%;
-    /* position: absolute; */
     bottom: 30%;
 }
 
 .choicesDiv {
-    /* position: fixed; */
     bottom: 50%;
     width: 40%;
     right: 28%;
 }
 
 #search-btn {
-    /* position: fixed; */
     bottom: 15%;
     width: 100px;
 }
@@ -79,8 +74,10 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     color: red;
+    text-align: center;
   }
-  .results {
+
+.results {
    display: flex;
    flex-direction: column;
    width: 30%;
@@ -91,48 +88,49 @@ main {
    background-color: var(--primary);
    border: var(--secondary);
    padding: 5px;
-   
-  
-    /* position: relative; */
+
   }
-  .search img {
+
+.search img {
     width: 75%;
     margin-left: auto;
-   margin-right: auto;
+    margin-right: auto;
   }
   
-  .search-results {
-    /* position: fixed; */
-    /* border: 1px solid black; */
+.search-results {
+    text-align: center;
     padding: 15px;
     justify-content: space-around;
   }
-  .checkbox {
+
+.checkbox {
     color: white;
     font-size: 150%;
+    padding: 10px;
   }
-  .btn{
+
+.btn {
     color: white;
-    background-color:green;
+    background-color:#C990C0;
     border:2px solid white;
-    
   }
-.btn1{
+
+.btn1 {
     color: white;
-    background-color:green;
+    background-color:#C990C0;
     border:2px solid white;
-    
 }
+
 .btn:hover{
-    color: green;
+    color: #C990C0;
     background-color: white;
 }
 
 @media (max-width: 991.98px) {
     .results {
         width: 48%;
-    }
-}
+    }}
+
 @media (max-width: 576px) {
     .results {
         width: 99%;
@@ -140,6 +138,4 @@ main {
     .btn1 {
       color: var(--primary);
        width: 0px;
-
-    }
-}
+    }}
