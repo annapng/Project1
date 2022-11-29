@@ -1,5 +1,14 @@
 # Project1
 First project for DU Bootcamp
+<<<<<<< HEAD
+<<<<<<< HEAD
+ fun stuff
+=======
+ fun stuff
+
+ testing to see if this will push!!!!!
+>>>>>>> c6a8f23402f794fc233ce64393e0805743adb868
+=======
 
 # <Your-Project-Title>
 
@@ -59,3 +68,4 @@ If your project has a lot of features, list them here.
 ## Tests
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+>>>>>>> 073e1d2c99d054f77b6a8cb5c253334ffcff3cd1
