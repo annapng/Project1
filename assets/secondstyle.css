@@ -1,28 +1,48 @@
 
 :root {
-    --primary:green;
+    --primary:rgb(0, 115, 123);
     --secondary:white;
     }
 
 body {
         background-color: var(--primary);
+        background: url(\restaurant.png) repeat;
     }
 
 
-
-
 .headerDiv {
-    border: 1px solid black;
+    border-bottom: 10px solid var(--secondary);
     width: 100%;
     height: 15%;
-    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     padding: 10px;
     text-align: center;
+    background: url(\restaurant.png) repeat;
     background-color: var(--primary);
     color: var(--secondary);
+}
+
+.headerTitle {
+    font-size: 300%;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.shuffleButton {
+    right: 20px;
+    font-size: 100%;
+}
+
+.btn {
+    color: white;
+    background-color:#C990C0;
+    border:2px solid white;
+  }
+
+.btn:hover {
+    color: #C990C0;
+    background-color: white;
 }
 
 #shuffle {
@@ -33,7 +53,7 @@ body {
 aside {
     border: 1px solid blue;
     width: 18%;
-    height: 83%;
+    height: 80%;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -47,9 +67,8 @@ aside {
 
 section {
     border: 1px solid blue;
-    width: 80%;
+    width: 100%;
     height: 83%;
-    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,26 +81,27 @@ section {
     padding: 5px;
 }
 
-
-#resultsPhoto {
-    font-size: large;
-    top: 0;
-    position: absolute;
-    padding: 10px;
-    
+.container {
+    width: 80%;
+    top:0;
+    margin-right: 0;
 }
+
+#resultsImage {
+    width: 100%;
+}
+
+
 
 #recTitle {
-font-size: large;
-top: 10;
-position: absolute;
-padding: 10px;
+    font-size: large;
+    top: 10;
+    position: absolute;
+    padding: 10px;
 }
 
 
-
-
-#recipe-img img {
+/* #recipe-img img {
     left: 300px;
     width: 40%;
     bottom: 0;

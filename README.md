@@ -6,7 +6,7 @@
 
 Coder's Cuisine is a website designed for people that have specific dietary restrictions or items at home that they want to use and need a new recipe! This website gives people more variety for the ingredients they usually use at home without having to make an extra trip to the grocery store.
 
- - What was your motivation?
+- What was your motivation?
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
 - What problem does it solve?
 - What did you learn?
@@ -19,7 +19,11 @@ Our team used HTML, CSS, JavaScript and Bootstrap with the 2 APIs used below to 
 - [Spoonacular](https://spoonacular.com/food-api) - nutrition and recipe API 
 - [Weatherbit](https://www.weatherbit.io/features) - weather API
 
-Screenshots of finished website:
+Favicon by https://icons8.com
+Background image by https://www.toptal.com/designers/subtlepatterns/ 
+
+
+## Screenshots of finished website:
 
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
@@ -41,49 +45,27 @@ Given I am a user who needs information about the weather to make a decision on 
 
 ## Acceptance Criteria
 
-Use a CSS framework other than Bootstrap.
-
-Be deployed to GitHub Pages.
-
-Be interactive (i.e: accept and respond to user input).
-
-Use at least two server-side APIs.
-
-Does not use alerts, confirms, or prompts (use modals).
-
-Use client-side storage to store persistent data.
-
-Be responsive.
-
-Have a polished UI.
-
-Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
-
-Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+[] Use a CSS framework other than Bootstrap.
+[] Be deployed to GitHub Pages.
+[] Be interactive (i.e: accept and respond to user input).
+[] Use at least two server-side APIs.
+[] Does not use alerts, confirms, or prompts (use modals).
+[] Use client-side storage to store persistent data.
+[] Be responsive.
+[] Have a polished UI.
+[] Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
+[] Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 
 ## Credits
-
-Add your github sites if you want!
+**Make these links pretty
 We had 4 collaborators on this website:
-Anna Murphy
-Ryan Smith
-Wyatt Gaulke 
+Anna Murphy - https://github.com/annapng 
+Ryan Smith - https://github.com/EarlofSmith 
+Wyatt Gaulke - https://github.com/wjg97 
 Helen Hosse - https://github.com/helenhosse
 
 We recieved help from our instructor and TAs - Karina Guerrero Fernandez, Jake Pedigo, Nic Catania, and Luis Pineda
-
-
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-
->>> do we need to add a license?
 
 
 ## Tests
