@@ -57,15 +57,9 @@ font-size: large;
 top: 10;
 position: absolute;
 padding: 10px;
-
 }
 
-#ingList {
+#recipe-img img {
 
-
-}
-
-#actRecipe {
-
-
+    width: 500px;
 }
