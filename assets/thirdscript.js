@@ -6,17 +6,17 @@ const recipeContainer = document.querySelector("#recipe-container");
 const key = 'cce3181053584b698c17ad000331b803';
 
 var recipeList = JSON.parse(localStorage.getItem("recipe"));
-var chosenIndex = JSON.parse(localStorage.getItem("current-recipe"));
+// var chosenIndex = JSON.parse(localStorage.getItem("current-recipe"));
 console.log (recipeList);
-console.log (chosenIndex);
-var chosenRecipe = recipeList.results[chosenIndex];
+// console.log (chosenIndex);
+var chosenRecipe = recipeList.recipes[0].id;
 
 
 // console.log (chosenRecipe);
 // console.log (chosenRecipe.id);
 
 
-var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?apiKey=${key}`)
+var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe}/card/?apiKey=${key}`)
   .then((response) => {
     var card = response; 
     console.log(card)
@@ -75,6 +75,6 @@ class randomRecipe {
         rand.fetchRandom().then((data) => {
         console.log(data)
         localStorage.setItem('recipe', JSON.stringify(data));
-        document.location.href = "./third-page.html"
+        location.reload();
         })
     })
