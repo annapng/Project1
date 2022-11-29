@@ -1,4 +1,4 @@
-const recipeContainer = document.querySelector("#recipe-container");
+/*const recipeContainer = document.querySelector("#recipe-container");
 const key ='802a019a602c480da05b17676eeb3ce3';
 // https://api.spoonacular.com/recipes/analyzeInstructions
 
@@ -86,7 +86,7 @@ class randomRecipe {
     });
 
 
-
+*/
 
 
 
@@ -94,22 +94,30 @@ const weatherkey = 'icI2CTNjyNO2wVzp28G48OGkp40Eim92'
 
 const getWeather = async (id) => {
     const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
-    const query = `${id}?apikey=${key}`;
+    const query = `${id}?apikey=${weatherkey}`;
     
     const response = await fetch(base + query);
     const data = await response.json();
     
     return data[0];
-    console.log(data);
+    //console.log(data);
 };
-const getCity = async (city) => {
+async function getCity(city) {
     const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
-    const query = `?apikey=${key}&q=${city}`;
-    
+    const query = `?apikey=${weatherkey}&q=${city}`;
+
     const response = await fetch(base + query);
     const data = await response.json();
     console.log(data[0]);
 };
+
+var weather = getWeather
+if(weather < '45'){
+
+}else if (weather > '45'){
+
+}
+
     
 getCity('cheyenne')
     .then(data => {
