@@ -1,6 +1,6 @@
 // new emergency api key:
 // const key = 'cce3181053584b698c17ad000331b803';
-const key = 'f20c89b2b15e4edd9e95b759b8146d36'
+const key = '4f01a6d633eb4639b8a8c4c8417804df'
 
 
 function App() {
@@ -175,7 +175,7 @@ search.addEventListener("keydown", function(event) {
     // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
     // const key = 'c532660435c5437ea9550a5436d094b0'
     // const key ='802a019a602c480da05b17676eeb3ce3'
-    const key ="8848face408443bda493657897ec7fac"
+    const key ="4f01a6d633eb4639b8a8c4c8417804df"
     
     var random = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${key}`);
     console.log(random);
