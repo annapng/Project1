@@ -1,26 +1,28 @@
+
 /*const recipeContainer = document.querySelector("#recipe-container");
 const key ='802a019a602c480da05b17676eeb3ce3';
+=======
+const recipeContainer = document.querySelector("#recipe-container");
+// const key ='802a019a602c480da05b17676eeb3ce3';
+// const key ="8848face408443bda493657897ec7fac"
+>>>>>>> 04d99cc4766cf412b7e61ec1f69cdda7cf45f747
 // https://api.spoonacular.com/recipes/analyzeInstructions
+// new emergency api key:
+const key = 'cce3181053584b698c17ad000331b803';
 
 var recipeList = JSON.parse(localStorage.getItem("recipe"));
 var chosenIndex = JSON.parse(localStorage.getItem("current-recipe"));
-var chosenRecipe = recipeList.results[chosenIndex];
 console.log (recipeList);
 console.log (chosenIndex);
-console.log (chosenRecipe);
-console.log (chosenRecipe.id);
+var chosenRecipe = recipeList.results[chosenIndex];
 
 /*
 var search = fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}/${chosenRecipe.id}/card`);
 console.log(search);
 
 
-$.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidget.json?apiKey=${key}`, function(ingredientData){
-  var ingredientList = [];
-   ingredientList = ingredientData.ingredients;
-   console.log(ingredientList);
-   window.ingredientList = ingredientList;
-});
+// console.log (chosenRecipe);
+// console.log (chosenRecipe.id);
 
 
 var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?apiKey=${key}`)
@@ -31,19 +33,28 @@ var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?a
     image(cardURL);
     console.log(cardURL);
 
+<<<<<<< HEAD
 
 
   });
 
+=======
+  });
+
+
+>>>>>>> 04d99cc4766cf412b7e61ec1f69cdda7cf45f747
 function image(cardURL) {
 
   fetch(cardURL)
   .then((response) => {
     return response.json();
+<<<<<<< HEAD
    /* console.log(response);
     console.log(response.PromiseResult);
     console.log(response.url); 
 
+=======
+>>>>>>> 04d99cc4766cf412b7e61ec1f69cdda7cf45f747
   })
 
   .then((response) => {
@@ -51,6 +62,7 @@ function image(cardURL) {
     console.log(response.url);
     var image = response.url;
     renderRecipe(image);
+<<<<<<< HEAD
 
   })
   
@@ -69,9 +81,21 @@ function renderRecipe (image) {
 
 
   
+=======
+  })
+>>>>>>> 04d99cc4766cf412b7e61ec1f69cdda7cf45f747
 }
 
-renderRecipe();
+
+
+
+function renderRecipe (image) {
+    recipeContainer.insertAdjacentHTML(`afterbegin`, 
+    `<div id="recipe-img">
+      <a href="${image}" target="_blank"><img src="${image}" id="resultsImage" alt="photo of recipe"></a>
+    </div>
+  </div>`);
+}
 
 var tryAgain = document.getElementById("tryAgain");
 
@@ -79,26 +103,28 @@ tryAgain.addEventListener ("click",() => {
     document.location.href = "./index.html"});
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // shuffle buton fetch and event
+=======
+// shuffle button fetch and event
+>>>>>>> 04d99cc4766cf412b7e61ec1f69cdda7cf45f747
 class randomRecipe {
         async fetchRandom() {
-    // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
-    const key = 'c532660435c5437ea9550a5436d094b0'
-    // const key ='802a019a602c480da05b17676eeb3ce3'
-    
+    // const key = '8848face408443bda493657897ec7fac'
     var random = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${key}`);
     console.log(random);
     var storedRandom = await random.json();
+    console.log(storedRandom)
     return storedRandom;
-    }
-    }  
-    // event listner for the random button
+    }}  
+    // event listener for the random button
     var rand = new randomRecipe();  
     var randombtn = document.getElementById("shuffleButton")
     randombtn.addEventListener("click",() => {
         rand.fetchRandom().then((data) => {
+        console.log(data)
         localStorage.setItem('recipe', JSON.stringify(data));
-        location.reload();
+        document.location.href = "./third-page.html"
         })
     });
 
@@ -142,6 +168,7 @@ getCity('cheyenne')
     }).then(data => {
         console.log(data);
     })
+
     .catch(err => console.log(err));
     
 getWeather('331604');   
@@ -217,3 +244,16 @@ button.addEventListener("click", () => {
     })
 })
 */
+
+
+
+let btnDsn = document.querySelector("#btn-design");
+    localStorage.setItem('Name','CLICKED');
+let name = localStorage.getItem('previousRecipe');
+  
+(function (){
+    btnDsn.onclick = function() {
+        btnDsn.textContent = previousRecipe;
+    };
+})();
+localStorage.clear();
