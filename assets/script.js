@@ -35,7 +35,7 @@ class recipeResults {
 
 // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
 // const key = 'c532660435c5437ea9550a5436d094b0'
- const key ='802a019a602c480da05b17676eeb3ce3'
+ const key ='8848face408443bda493657897ec7fac';
 
 
 let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");

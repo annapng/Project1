@@ -1,5 +1,5 @@
 const recipeContainer = document.querySelector("#recipe-container");
-const key ='802a019a602c480da05b17676eeb3ce3';
+const key ='8848face408443bda493657897ec7fac';
 // https://api.spoonacular.com/recipes/analyzeInstructions
 
 var recipeList = JSON.parse(localStorage.getItem("recipe"));
@@ -10,18 +10,6 @@ console.log (chosenIndex);
 console.log (chosenRecipe);
 console.log (chosenRecipe.id);
 
-/*
-var search = fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}/${chosenRecipe.id}/card`);
-console.log(search);
-
-
-$.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidget.json?apiKey=${key}`, function(ingredientData){
-  var ingredientList = [];
-   ingredientList = ingredientData.ingredients;
-   console.log(ingredientList);
-   window.ingredientList = ingredientList;
-});
-*/
 
 var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?apiKey=${key}`)
   .then((response) => {
@@ -31,18 +19,15 @@ var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?a
     image(cardURL);
     console.log(cardURL);
 
-
-
   });
+
 
 function image(cardURL) {
 
   fetch(cardURL)
   .then((response) => {
     return response.json();
-   /* console.log(response);
-    console.log(response.PromiseResult);
-    console.log(response.url); */
+
 
   })
 
@@ -63,15 +48,13 @@ function renderRecipe (image) {
 
     recipeContainer.insertAdjacentHTML(`afterbegin`, 
     `<div id="recipe-img">
-      <img src="${image}" alt="photo of recipe">
+      <a href="${image}" target="_blank"><img src="${image}" alt="photo of recipe"></a>
     </div>
   </div>`);
 
 
   
 }
-
-renderRecipe();
 
 var tryAgain = document.getElementById("tryAgain");
 
