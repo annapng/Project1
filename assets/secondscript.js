@@ -10,6 +10,10 @@ console.log (chosenIndex);
 console.log (chosenRecipe);
 console.log (chosenRecipe.id);
 
+/*
+var search = fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}/${chosenRecipe.id}/card`);
+console.log(search);
+
 
 $.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidget.json?apiKey=${key}`, function(ingredientData){
   var ingredientList = [];
@@ -17,41 +21,32 @@ $.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidg
    console.log(ingredientList);
    window.ingredientList = ingredientList;
 });
+*/
+
+var card = fetch(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/card/?apiKey=${key}`)
+  .then((response) => {
+    var card = response; 
+    console.log(card)
+    console.log(card.url);
+    var cardURL = card.url;
+    renderRecipe(cardURL);
+    console.log(Response.url);
+   console.log(Response.url.value);
+  });
 
 
-$.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/analyzedInstructions?apiKey=${key}`, function(stepData) {
-  console.log(stepData);
-  console.log(stepData[0].steps);
-
- 
-    var stepList = Object.values(stepData[0].steps[0].step);
-    stepList = stepList.join("");
-    console.log(stepList);
-
-  
 
 
+function renderRecipe (cardURL) {
 
-});
-
-
-function renderRecipe () {
-
-    recipeContainer.insertAdjacentHTML(`afterbegin`, `<div class="recipe"> 
-    <div id="recTitle">${chosenRecipe.title}</div>
-    <div id="recipe-img">;
-      <img src="${chosenRecipe.image}" alt="photo of recipe">
+    recipeContainer.insertAdjacentHTML(`afterbegin`, 
+    `<div id="recipe-img">
+      <img src="${cardURL}" alt="photo of recipe">
     </div>
   </div>`);
 
 
-  var ingUl = document.getElementById("ingredUl");
-  console.log(ingredientList);
-  ingredientList.forEach((item) => {
-    let li = document.createElement("li");
-    li.innertext = item;
-    ingUl.appendChild(li);
-  });
+
   
 }
 
@@ -85,31 +80,7 @@ class randomRecipe {
         })
     })
 
-    class Recipes {
-        async fetchRecipe(input) {
-        
-        const key = 'c532660435c5437ea9550a5436d094b0'
-        
-        search = awaitfetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
-        console.log(search);
-        var storedRecipe = await search.json();
-        console.log(storedRecipe);
-        return storedRecipe;
-        }
-        }
-    
-    
-    var R = new Recipes();
-    var search = document.getElementById("try-again");
-    
-    button.addEventListener("click", () => {
-        const choice = search.value;
-        search.value = "";
-        R.fetchRecipe(choice).then((data) => {
-            console.log(data);
-        })
-    })
-    
+
 
 
 
@@ -159,7 +130,7 @@ var renderRecipies = (recipeList=[]) => {
 
 
 
-class Recipes {
+/*class Recipes {
     async fetchRecipe(input) {
     
     const key = 'c532660435c5437ea9550a5436d094b0'
@@ -183,4 +154,4 @@ button.addEventListener("click", () => {
         console.log(data);
     })
 })
-
+*/
