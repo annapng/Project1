@@ -4,32 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="assets\secondstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/secondstyle.css">
   <title>Coder's Cuisine</title>
 </head>
+
 <body>
-  <div>
-    <header class="headerDiv">Coder's Cuisine
-      <div class="control">
-        <button id="try-again">Search Again?</button>
+    
+  <div class="container" id="headerDiv">
+      <h1>Coder's Cuisine</h1>      
+      <p>What's for Dinner?</p>
+      <button id="shuffleButton">Shuffle!!</button>
     </div>
-    </header>
-  </div>
  <aside>
-
     <p>You searched:
+      <h2></h2>
+      <label class="checkbox"><input type="checkbox"> Gluten Free</label>
+      <label class="checkbox"><input type="checkbox"> Ketogenic</label>
+      <label class="checkbox"><input type="checkbox"> Vegan</label>
+      <label class="checkbox"><input type="checkbox"> Vegetarian</label>
+      <label class="checkbox"><input type="checkbox"> Whole30</label>
+      <label class="checkbox"><input type="checkbox"> Dairy Free</label>
+      <label class="checkbox"><input type="checkbox"> Very Healthy</label>
     <p>Tips on Recipes:
+    <button id="tryAgain" type="button" class="btn btn-info">Search Again?</button>
  </aside>
-  <main>
-    <div id="recTitle">Recipe Title: </div>
-    <div id="ingList">Ingredients List: </div>
-    <div id="actRecipe">Actual Recipe: </div>
-  </main>
 
+
+  <section class="container">
+    <div class="search">
+      <div id="recipe-container">
+
+
+        <div>
+          <ul id="ingredUl">
+
+          </ul>
+        </div>
+        <div>
+          <ul id="recipeUl">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
   <footer>
   </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="assets\secondscript.js"></script>
 </body>
 </html>

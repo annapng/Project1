@@ -1,30 +1,68 @@
-const key = 'icI2CTNjyNO2wVzp28G48OGkp40Eim92'
+const recipeContainer = document.querySelector("#recipe-container");
+const key ='802a019a602c480da05b17676eeb3ce3';
+// https://api.spoonacular.com/recipes/analyzeInstructions
 
-const getWeather = async (id) => {
-    const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
-    const query = `${id}?apikey=${key}`;
+var recipeList = JSON.parse(localStorage.getItem("recipe"));
+var chosenIndex = JSON.parse(localStorage.getItem("current-recipe"));
+var chosenRecipe = recipeList.results[chosenIndex];
+console.log (recipeList);
+console.log (chosenIndex);
+console.log (chosenRecipe);
+console.log (chosenRecipe.id);
 
-    const response = await fetch(base + query);
-    const data = await response.json();
 
-    return data[0];
-    console.log(data);
-};
-const getCity = async (city) => {
-    const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
-    const query = `?apikey=${key}&q=${city}`;
+$.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/ingredientWidget.json?apiKey=${key}`, function(ingredientData){
+  var ingredientList = [];
+   ingredientList = ingredientData.ingredients;
+   console.log(ingredientList);
+   window.ingredientList = ingredientList;
+});
 
-    const response = await fetch(base + query);
-    const data = await response.json();
-    console.log(data[0]);
-};
 
-getCity('cheyenne')
-    .then(data => {
-        return getWeather(data.Key)
-    }).then(data => {
-        console.log(data);
-    })
-    .catch(err => console.log(err));
+$.getJSON(`https://api.spoonacular.com/recipes/${chosenRecipe.id}/analyzedInstructions?apiKey=${key}`, function(stepData) {
+  console.log(stepData);
+  console.log(stepData[0].steps);
 
-getWeather('331604');    
+
+  for (let i = 0; i < stepData[0].steps.length; i++) {
+   
+    var stepList = Object.values(stepData[0].steps[i].step);
+    stepList[i] = stepList[i].join("");
+    console.log(stepList[i]);
+    
+  }
+  
+
+
+
+});
+
+
+function renderRecipe () {
+
+    recipeContainer.insertAdjacentHTML(`afterbegin`, `<div class="recipe"> 
+    <div id="recTitle">${chosenRecipe.title}</div>
+    <div id="recipe-img">;
+      <img src="${chosenRecipe.image}" alt="photo of recipe">
+    </div>
+  </div>`);
+
+
+  var ingUl = document.getElementById("ingredUl");
+  console.log(ingredientList);
+  ingredientList.forEach((item) => {
+    let li = document.createElement("li");
+    li.innertext = item;
+    ingUl.appendChild(li);
+  });
+  
+}
+
+renderRecipe();
+
+var tryAgain = document.getElementById("tryAgain");
+
+tryAgain.addEventListener ("click",() => {
+    document.location.href = "./index.html"});
+
+

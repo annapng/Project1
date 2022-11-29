@@ -48,13 +48,33 @@ const key = 'c532660435c5437ea9550a5436d094b0'
 const key ='802a019a602c480da05b17676eeb3ce3'
 >>>>>>> 3aab48b3580a66708dfd3a7c29b0a12d1aec815d
 
-search = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}`);
+let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+let values = [];
+checkboxes.forEach((checkbox) => {
+    values.push(checkbox.value);
+});
+
+console.log(values);
+var searchArray = "&diet=";
+
+for (let i = 0; i < values.length; i++) {
+   searchArray = searchArray.concat(values[i]);
+   if (i < values.length - 1) {
+        searchArray = searchArray.concat("&diet=");
+   }
+}
+
+searchArray.toString();
+
+var search = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&query=${input}${searchArray}`);
 console.log(search);
 var storedRecipe = await search.json();
 console.log(storedRecipe);
 return storedRecipe;
 }
-}    
+}
+
+
 class showResults{
     constructor(){
         this.container = document.getElementById("search-results");
@@ -91,10 +111,12 @@ class showResults{
        
         btn0.addEventListener("click",() => {
             localStorage.setItem(`recipe`,JSON.stringify(data));
+            localStorage.setItem(`current-recipe`,JSON.stringify(0)); 
             document.location.href = "./second-page.html"
         })
         btn1.addEventListener("click",() => {
             localStorage.setItem(`recipe`,JSON.stringify(data));
+            localStorage.setItem(`current-recipe`,JSON.stringify(1)); 
             document.location.href = "./second-page.html"
         });
          btn2.addEventListener("click",() => {
@@ -137,24 +159,15 @@ var RR = new recipeResults
 var search = document.getElementById("Search-bar");
 var button = document.getElementById("search-btn");
 button.addEventListener("click", () => {
-    const choice= search.value;
-    search.value="";
+ 
+const choice = search.value;
+search.value = "";
+
+
     RR.fetchRecipe(choice).then((data) =>{
         console.log(data);
         SR.displaySearch(data);
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-})
-//>>>>>>> 74e12142819046fbe0433ef609f5641afad10254
-=======
-    // .then(() => {
-    //     console.log(data);
-    // })
-})
->>>>>>> 3f6ce4ce041209fc27039a779e46347e12cd7628
-=======
 })
 
 // call for the shuffle infomation from spoonacular
@@ -181,4 +194,3 @@ randombtn.addEventListener("click",() => {
     document.location.href = "./second-page.html"
     })
 })
->>>>>>> 3aab48b3580a66708dfd3a7c29b0a12d1aec815d
