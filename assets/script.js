@@ -1,5 +1,5 @@
 // new emergency api key:
-const key = 'cce3181053584b698c17ad000331b803';
+const key = '4f01a6d633eb4639b8a8c4c8417804df';
 
 
 function App() {
@@ -52,84 +52,142 @@ class showResults{
     }
 
     displaySearch(data) {
+
         console.log(data);
-        this.container.innerHTML += `
-            <ul class="search">
+
+        if (data.results[0] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
                 <button type=button id= "${data.results[0].title}" class="results">${data.results[0].title} <img src=${data.results[0].image} </button>
+            </div> `
+            var btn0 = document.getElementById(`${data.results[0].title}`);
+            btn0.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(0)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+
+        if (data.results[1] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
                 <button type=button id= "${data.results[1].title}" class="results">${data.results[1].title} <img src=${data.results[1].image} </button>
-                <button type=button id= "${data.results[2].title}" class="results">${data.results[2].title} <img src=${data.results[2].image} </button>
-                <button type=button id= "${data.results[3].title}" class="results">${data.results[3].title} <img src=${data.results[3].image} </button>
-                <button type=button id= "${data.results[4].title}" class="results">${data.results[4].title} <img src=${data.results[4].image} </button>
-                <button type=button id= "${data.results[5].title}" class="results">${data.results[5].title} <img src=${data.results[5].image} </button>
-                <button type=button id= "${data.results[6].title}" class="results">${data.results[6].title} <img src=${data.results[6].image} </button>
-                <button type=button id= "${data.results[7].title}" class="results">${data.results[7].title} <img src=${data.results[7].image} </button>
-                <button type=button id= "${data.results[8].title}" class="results">${data.results[8].title} <img src=${data.results[8].image} </button>
-                <button type=button id= "${data.results[9].title}" class="results">${data.results[9].title} <img src=${data.results[9].image} </button>
-            </div>
-        `
+            </div> `
+            var btn1 = document.getElementById(`${data.results[1].title}`);
+            btn1.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(1)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
         
-        var btn0 = document.getElementById(`${data.results[0].title}`);
-        var btn1 = document.getElementById(`${data.results[1].title}`);
-        var btn2 = document.getElementById(`${data.results[2].title}`);
-        var btn3 = document.getElementById(`${data.results[3].title}`);
-        var btn4 = document.getElementById(`${data.results[4].title}`);
-        var btn5 = document.getElementById(`${data.results[5].title}`);
-        var btn6 = document.getElementById(`${data.results[6].title}`);
-        var btn7 = document.getElementById(`${data.results[7].title}`);
-        var btn8 = document.getElementById(`${data.results[8].title}`);
-        var btn9 = document.getElementById(`${data.results[9].title}`);
-       
-        btn0.addEventListener("click",() => {
-            localStorage.setItem(`recipe`,JSON.stringify(data));
-            localStorage.setItem(`current-recipe`,JSON.stringify(0)); 
-            document.location.href = "./second-page.html"
-        })
-        btn1.addEventListener("click",() => {
-            localStorage.setItem(`recipe`,JSON.stringify(data));
-            localStorage.setItem(`current-recipe`,JSON.stringify(1)); 
-            document.location.href = "./second-page.html"
-        });
-         btn2.addEventListener("click",() => {
-             localStorage.setItem(`recipe`,JSON.stringify(data));
-             localStorage.setItem(`current-recipe`,JSON.stringify(2)); 
-             document.location.href = "./second-page.html"
-        });   
-        btn3.addEventListener("click",() => {
-            localStorage.setItem(`recipe`,JSON.stringify(data));
-            localStorage.setItem(`current-recipe`,JSON.stringify(3)); 
-            document.location.href = "./second-page.html"
-       });
-       btn4.addEventListener("click",() => {
-        localStorage.setItem(`recipe`,JSON.stringify(data));
-        localStorage.setItem(`current-recipe`,JSON.stringify(4)); 
-        document.location.href = "./second-page.html"
-        });
-        btn5.addEventListener("click",() => {
-            localStorage.setItem(`recipe`,JSON.stringify(data));
-            localStorage.setItem(`current-recipe`,JSON.stringify(5)); 
-            document.location.href = "./second-page.html"
-       });
-       btn6.addEventListener("click",() => {
-        localStorage.setItem(`recipe`,JSON.stringify(data));
-        localStorage.setItem(`current-recipe`,JSON.stringify(6)); 
-        document.location.href = "./second-page.html"
-        });
-        btn7.addEventListener("click",() => {
-            localStorage.setItem(`recipe`,JSON.stringify(data));
-            localStorage.setItem(`current-recipe`,JSON.stringify(7)); 
-            document.location.href = "./second-page.html"
-       });
-       btn8.addEventListener("click",() => {
-        localStorage.setItem(`recipe`,JSON.stringify(data));
-        localStorage.setItem(`current-recipe`,JSON.stringify(8)); 
-        document.location.href = "./second-page.html"
-        });
-        btn9.addEventListener("click",() => {
-            localStorage.setItem(`recipe`,JSON.stringify(data));
-            localStorage.setItem(`current-recipe`,JSON.stringify(9)); 
-            document.location.href = "./second-page.html"
-       });
+        if (data.results[2] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
+                <button type=button id= "${data.results[2].title}" class="results">${data.results[2].title} <img src=${data.results[2].image} </button>
+            </div> `
+            var btn2 = document.getElementById(`${data.results[2].title}`);
+            btn2.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(2)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+        
+        if (data.results[3] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
+                <button type=button id= "${data.results[3].title}" class="results">${data.results[3].title} <img src=${data.results[3].image} </button>
+            </div> `
+            var btn3 = document.getElementById(`${data.results[3].title}`);
+            btn3.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(3)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+
+        if (data.results[4] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
+                <button type=button id= "${data.results[4].title}" class="results">${data.results[4].title} <img src=${data.results[4].image} </button>
+            </div> `
+            var btn4 = document.getElementById(`${data.results[4].title}`);
+            btn4.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(4)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+
+        if (data.results[5] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
+                <button type=button id= "${data.results[5].title}" class="results">${data.results[5].title} <img src=${data.results[5].image} </button>
+            </div> `
+            var btn5 = document.getElementById(`${data.results[5].title}`);
+            btn5.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(5)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+
+        if (data.results[6] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
+                <button type=button id= "${data.results[6].title}" class="results">${data.results[6].title} <img src=${data.results[6].image} </button>
+            </div> `
+            var btn6 = document.getElementById(`${data.results[6].title}`);
+            btn6.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(6)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+
+        if (data.results[7] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
+                <button type=button id= "${data.results[7].title}" class="results">${data.results[7].title} <img src=${data.results[7].image} </button>
+            </div> `
+            var btn7 = document.getElementById(`${data.results[7].title}`);
+            btn7.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(7)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+
+        if (data.results[8] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
+                <button type=button id= "${data.results[8].title}" class="results">${data.results[8].title} <img src=${data.results[8].image} </button>
+            </div> `
+            var btn8 = document.getElementById(`${data.results[8].title}`);
+            btn8.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(8)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+
+        
+        if (data.results[9] !== 'undefined'){
+            this.container.innerHTML += 
+            `<ul class="search">
+                <button type=button id= "${data.results[9].title}" class="results">${data.results[9].title} <img src=${data.results[9].image} </button>
+            </div> `
+            var btn9 = document.getElementById(`${data.results[9].title}`);
+            btn9.addEventListener("click",() => {
+                localStorage.setItem(`recipe`,JSON.stringify(data));
+                localStorage.setItem(`current-recipe`,JSON.stringify(9)); 
+                document.location.href = "./second-page.html"
+            })
+        } else {null;}
+
     }};
+
 
 
 function clear(){
@@ -208,4 +266,4 @@ search.addEventListener("keydown", function(event) {
 //     }  
 //    t = new trivia
 //    t.randomTrivia();
- 
+
