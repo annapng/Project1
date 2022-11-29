@@ -1,5 +1,5 @@
 // new emergency api key:
-// const key = 'cce3181053584b698c17ad000331b803';
+const key = 'cce3181053584b698c17ad000331b803';
 
 
 function App() {
@@ -10,11 +10,18 @@ function App() {
 
 class recipeResults {
     async fetchRecipe(input) {
-    const key ='8848face408443bda493657897ec7fac';
-    let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
-    let values = [];
-    checkboxes.forEach((checkbox) => {
-      values.push(checkbox.value);
+
+
+// added a second key we can use if we get to more then the set number of calls on the first key. just comment one
+// const key = 'c532660435c5437ea9550a5436d094b0'
+//  const key ='802a019a602c480da05b17676eeb3ce3'
+//  const key = "8848face408443bda493657897ec7fac"
+
+
+let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+let values = [];
+checkboxes.forEach((checkbox) => {
+    values.push(checkbox.value);
 });
 
 
@@ -84,34 +91,42 @@ class showResults{
         });
          btn2.addEventListener("click",() => {
              localStorage.setItem(`recipe`,JSON.stringify(data));
+             localStorage.setItem(`current-recipe`,JSON.stringify(2)); 
              document.location.href = "./second-page.html"
         });   
         btn3.addEventListener("click",() => {
             localStorage.setItem(`recipe`,JSON.stringify(data));
+            localStorage.setItem(`current-recipe`,JSON.stringify(3)); 
             document.location.href = "./second-page.html"
        });
        btn4.addEventListener("click",() => {
         localStorage.setItem(`recipe`,JSON.stringify(data));
+        localStorage.setItem(`current-recipe`,JSON.stringify(4)); 
         document.location.href = "./second-page.html"
         });
         btn5.addEventListener("click",() => {
             localStorage.setItem(`recipe`,JSON.stringify(data));
+            localStorage.setItem(`current-recipe`,JSON.stringify(5)); 
             document.location.href = "./second-page.html"
        });
        btn6.addEventListener("click",() => {
         localStorage.setItem(`recipe`,JSON.stringify(data));
+        localStorage.setItem(`current-recipe`,JSON.stringify(6)); 
         document.location.href = "./second-page.html"
         });
         btn7.addEventListener("click",() => {
             localStorage.setItem(`recipe`,JSON.stringify(data));
+            localStorage.setItem(`current-recipe`,JSON.stringify(7)); 
             document.location.href = "./second-page.html"
        });
        btn8.addEventListener("click",() => {
         localStorage.setItem(`recipe`,JSON.stringify(data));
+        localStorage.setItem(`current-recipe`,JSON.stringify(8)); 
         document.location.href = "./second-page.html"
         });
         btn9.addEventListener("click",() => {
             localStorage.setItem(`recipe`,JSON.stringify(data));
+            localStorage.setItem(`current-recipe`,JSON.stringify(9)); 
             document.location.href = "./second-page.html"
        });
     }};
@@ -147,11 +162,20 @@ button.addEventListener("click", () => {
         SR.displaySearch(data);
     })
 })
+search.addEventListener("keydown", function(event) {
+    if (event.key === "Enter"){
+        button.click();
+    }
+})
 
 
-class randomRecipe {
-    async fetchRandom() {
-    const key = '8848face408443bda493657897ec7fac'
+    class randomRecipe {
+        async fetchRandom() {
+    // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
+    // const key = 'c532660435c5437ea9550a5436d094b0'
+    // const key ='802a019a602c480da05b17676eeb3ce3'
+    const key ="8848face408443bda493657897ec7fac"
+    
     var random = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${key}`);
     console.log(random);
     var storedRandom = await random.json();
@@ -163,7 +187,7 @@ class randomRecipe {
     randombtn.addEventListener("click",() => {
         rand.fetchRandom().then((data) => {
         localStorage.setItem('recipe', JSON.stringify(data));
-        document.location.href = "./second-page.html"
+        document.location.href = "./third-page.html"
         })
     })
  
