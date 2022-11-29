@@ -72,3 +72,16 @@ class randomRecipe {
         location.reload();
         })
     })
+
+
+
+let btnDsn = document.querySelector("#btn-design");
+    localStorage.setItem('Name','CLICKED');
+let name = localStorage.getItem('previousRecipe');
+  
+(function (){
+    btnDsn.onclick = function() {
+        btnDsn.textContent = previousRecipe;
+    };
+})();
+localStorage.clear();
