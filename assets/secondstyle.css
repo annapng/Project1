@@ -58,14 +58,14 @@ body {
     margin-top: auto;
 }
 
-#tryAgain {
+/* #tryAgain {
     right: 20px;
     font-size: 150%;
     color: white;
     border-radius: 5px;
     background-color:#C990C0;
     border:2px solid white;
-} 
+}  */
 
 #shuffle {
     /* position: absolute; */
