@@ -2,6 +2,7 @@
 :root {
     --primary:rgb(0, 115, 123);
     --secondary:white;
+    --alt:#C990C0;
     }
 
 body {
@@ -27,18 +28,20 @@ body {
 .headerTitle {
     font-size: 300%;
     font-family: 'Alfa Slab One', cursive;
+    text-shadow: 2px 2px var(--alt);
 }
 
 .shuffleButton {
     right: 20px;
     font-size: 100%;
-}
-
-#shuffleButton {
     color: white;
     background-color:#C990C0;
     border:2px solid white;
   }
+/* }
+
+#shuffleButton { */
+    
 
 .btn:hover {
     color: #C990C0;
@@ -55,7 +58,7 @@ body {
     margin-top: auto;
 }
 
-#tryAgain {
+/* #tryAgain {
     background-color: #C990C0;
     color: white;
     border:2px #C990C0;
@@ -64,12 +67,12 @@ body {
     height: 140px;
     position: absolute; 
     right: 40px;
-}
+} */
 
 
 
 #shuffle {
-    position: absolute;
+    /* position: absolute; */
     right: 20px;
 }
 
@@ -101,9 +104,9 @@ section {
 }
 
 .container {
-    width: 80%;
-    top:0;
-    margin-right: 0;
+    width: 100%;
+    /* top:0;
+    margin-right: 0; */
 }
 
 #resultsImage {
@@ -115,7 +118,7 @@ section {
 #recTitle {
     font-size: large;
     top: 10;
-    position: absolute;
+    /* position: absolute; */
     padding: 10px;
 }
 
