@@ -344,22 +344,22 @@ search.addEventListener("keydown", function(event) {
         document.location.href = "./third-page.html"
         })
     })
+ 
+    class trivia {
+        async randomTrivia() {
+    // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
+    // const key = 'c532660435c5437ea9550a5436d094b0'
+    // const key ='802a019a602c480da05b17676eeb3ce3'
+    var show = document.getElementById("trivia")
 
-//     class trivia {
-//         async randomTrivia() {
-//     // added a second key we can use if we get to more then the set number of calls on the first key. just comment one
-//     const key = 'c532660435c5437ea9550a5436d094b0'
-//     // const key ='802a019a602c480da05b17676eeb3ce3'
-//     var show = document.getElementById("trivia")
-
-//     var triviaRandom = await fetch(`https://api.spoonacular.com/food/trivia/random?apiKey=${key}`);
-//     console.log(triviaRandom);
-//    var storedTrivia = triviaRandom.json();
-//    console.log(storedTrivia)
-//         // show.textContent = storedTrivia.promise.PromiseResult.text
-//     return ;
-//     }
-//     }  
-//    t = new trivia
-//    t.randomTrivia();
+    var triviaRandom = await fetch(`https://api.spoonacular.com/food/trivia/random?apiKey=${key}`);
+    console.log(triviaRandom);
+   var storedTrivia = triviaRandom.json();
+   console.log(storedTrivia)
+        // show.textContent = storedTrivia.promise.PromiseResult.text
+    return ;
+    }
+    }  
+   t = new trivia
+   t.randomTrivia();
 
