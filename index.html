@@ -4,34 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets\style.css">
   <title>Coder's Cuisine</title>
+  <link rel="icon" 
+      type="image/png" 
+      href="assets\favicon.png" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <header>Coder's Cuisine
+  <div class="headerDiv">
+    <header class="headerTitle">Coder's Cuisine
     </header>
-    <button>Shuffle!!</button>
+    <button class="shuffleButton btn btn" id="shuffleButton">Let us choose for you - Click for a random recipe!!</button>
   </div>
   <main>
-    <div> 
-      <div>explanation paragraph</div>
+    <div>
+      <div class="trivia" id="trivia"></div>
+      <h2></h2>
+      <label class="checkbox"><input type="checkbox" id="gf" value="glutenfree"> Gluten Free</label>
+      <label class="checkbox"><input type="checkbox" id="df" value="dairyfree"> Dairy Free</label>
+      <label class="checkbox"><input type="checkbox" id="keto" value="ketogenic"> Ketogenic</label>
+      <label class="checkbox"><input type="checkbox" id="paleo" value="paleo"> Paleo</label>
+      <label class="checkbox"><input type="checkbox" id="vegan" value="vegan"> Vegan</label>
+      <label class="checkbox"><input type="checkbox" id="vegetar" value="vegetarian"> Vegetarian</label>
+      <label class="checkbox"><input type="checkbox" id="pescatar" value="pescatarian"> Pescatarian</label>
+      <label class="checkbox"><input type="checkbox" id="whole30" value="whole30"> Whole30</label>
     </div>
-     <div>
-      includes
-     </div>
-     <div>
-      Excludes
-     </div>
-     <div class="control">
-      <input class="input is-hovered" type="text" placeholder="Hovered input">
-      <button id="search-btn">Search</button>
+    <form class="container-fluid" id="input">
+      <div class="input-group">
+        <span class="input-group-text btn1" id="basic-addon1">Search for Recipes</span>
+        <input type="text" id="Search-bar" class="form-control form" placeholder="Enter recipe or ingredients here" aria-label="Username" aria-describedby="basic-addon1">
+        <button type="button" id="search-btn" class="btn btn-lg">Search</button>
+      </div>
+     
+    </form>
+
+    <div class="search-results"> 
+      <div id="search-results"></div>
     </div>
+   
   </main>
   <footer>
-  </footer>
+  </footer> 
 
-<script src="./script.js"></script>
+<script src="./assets/script.js"></script>
 </body>
 </html>
