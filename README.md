@@ -1,15 +1,8 @@
-# Project1
-
 # Coder's Cuisine
 
 ## Description
 
 Coder's Cuisine is a website designed for people that have specific dietary restrictions or items at home that they want to use and need a new recipe! This website gives people more variety for the ingredients they usually use at home without having to make an extra trip to the grocery store.
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
 ## Usage
 
@@ -19,18 +12,16 @@ Our team used HTML, CSS, JavaScript and Bootstrap with the 2 APIs used below to 
 - [Spoonacular](https://spoonacular.com/food-api) - nutrition and recipe API 
 - [Weatherbit](https://www.weatherbit.io/features) - weather API
 
-Favicon by https://icons8.com
-Background image by https://www.toptal.com/designers/subtlepatterns/ 
+
+  
+- Favicon by https://icons8.com
+- Background image by https://www.toptal.com/designers/subtlepatterns/ 
 
 
 ## Screenshots of finished website:
 
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+   
+![Screenshot of Main Page](assets\Screenshot.png)
 
 ## User Story
 
@@ -41,36 +32,34 @@ Given I am a user who has a list of new recipes to try, When I click on a specif
 Given I am a user who needs information about the weather to make a decision on recipes chosen, When I view weather in my area, Then I am presented with the current temperature of the city
 
 
->> could probably add a couple more, just a start
-
 ## Acceptance Criteria
 
-[] Use a CSS framework other than Bootstrap.
-[] Be deployed to GitHub Pages.
-[] Be interactive (i.e: accept and respond to user input).
+[x] Use a CSS framework other than Bootstrap. (cleared for Bootstrap)
+[x] Be deployed to GitHub Pages.
+[x] Be interactive (i.e: accept and respond to user input).
 [] Use at least two server-side APIs.
-[] Does not use alerts, confirms, or prompts (use modals).
-[] Use client-side storage to store persistent data.
-[] Be responsive.
-[] Have a polished UI.
-[] Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
-[] Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+[x] Does not use alerts, confirms, or prompts (use modals).
+[x] Use client-side storage to store persistent data.
+[x] Be responsive.
+[x] Have a polished UI.
+[x] Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
+[x] Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 
 ## Credits
 **Make these links pretty
 We had 4 collaborators on this website:
-Anna Murphy - https://github.com/annapng 
-Ryan Smith - https://github.com/EarlofSmith 
-Wyatt Gaulke - https://github.com/wjg97 
-Helen Hosse - https://github.com/helenhosse
+- Anna Murphy - https://github.com/annapng 
+- Ryan Smith - https://github.com/EarlofSmith 
+- Wyatt Gaulke - https://github.com/wjg97 
+- Helen Hosse - https://github.com/helenhosse
 
-We recieved help from our instructor and TAs - Karina Guerrero Fernandez, Jake Pedigo, Nic Catania, and Luis Pineda
+We received help from our instructor and TAs - Karina Guerrero Fernandez, Jake Pedigo, Nic Catania, and Luis Pineda
 
 
 ## Tests
 
 Our website should deploy from both of the sites listed below.
 
-Github repository:
-Deployed site: Anna you may need to request for the deployed site since it is on your github!
+- Github repository: https://github.com/annapng/Project1
+- Deployed site: https://annapng.github.io/Project1/ 
