@@ -58,25 +58,21 @@ body {
     margin-top: auto;
 }
 
-/* #tryAgain {
-    background-color: #C990C0;
+#tryAgain {
+    right: 20px;
+    font-size: 150%;
     color: white;
-    border:2px #C990C0;
-    border-radius: 50%;
-    width: 190px;
-    height: 140px;
-    position: absolute; 
-    right: 40px;
-} */
-
-
+    border-radius: 5px;
+    background-color:#C990C0;
+    border:2px solid white;
+} 
 
 #shuffle {
     /* position: absolute; */
     right: 20px;
 }
 
-aside {
+/*aside {
     border: 1px solid blue;
     width: 18%;
     height: 80%;
@@ -84,7 +80,7 @@ aside {
     bottom: 0;
     left: 0;
 
-}
+}*/
 
 
 section {
