@@ -107,6 +107,7 @@ main {
     text-align: center;
     padding: 15px;
     justify-content: space-around;
+    width: 70%;
   }
 
 .checkbox {
